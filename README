@@ -1,0 +1,39 @@
+This is a simple command line utility to produce a prefix-free Huffman encoding 
+of a given String. Pass in the String as a command line and receive a list of
+each unique character's Huffman code, as well as the fully encoded String, with
+each character encoded and separated by a single whitespace. 
+
+At the moment, the output is just returned to standard output.
+
+For now, grab the code and place it in its own directory. Then just compile and
+run:
+
+$ javac huffmancoding/Main.java huffmancoding/Code.java huffmancoding/Node.java huffmancoding/BinaryTree.java huffmancoding/HuffmanTree.java huffmancoding/PriorityQueue.java
+$ java huffmancoding/Main [mystring]
+
+Example: $ java huffmancoding/Main "This is an example of the Huffman algorithm at work."
+
+String: This is an example of the Huffman algorithm at work.
+k 110011 1
+w 110111 1
+g 110010 1
+u 110001 1
+H 110000 1
+p 110110 1
+x 101101 1
+T 101100 1
+. 10010 1
+r 11010 2
+n 10111 2
+s 10011 2
+l 0000 2
+t 0111 3
+f 0101 3
+o 0100 3
+m 0110 3
+e 0001 3
+i 1010 3
+h 1000 3
+a 001 5
+  111 9
+Encoded String: 101100 1000 1010 10011 111 1010 10011 111 001 10111 111 0001 101101 001 0110 110110 0000 0001 111 0100 0101 111 0111 1000 0001 111 110000 110001 0101 0101 0110 001 10111 111 001 0000 110010 0100 11010 1010 0111 1000 0110 111 001 0111 111 110111 0100 11010 110011 10010
