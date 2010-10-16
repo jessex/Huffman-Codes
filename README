@@ -1,9 +1,12 @@
-This is a simple command line utility to produce a prefix-free Huffman encoding 
-of a given String. Pass in the String as a command line and receive a list of
-each unique character's Huffman code, as well as the fully encoded String, with
-each character encoded and separated by a single whitespace. 
+DESCRIPTION
 
-At the moment, the output is just returned to standard output.
+Huffman Codes is a simple command line utility to produce a prefix-free Huffman 
+encoding of a given String. Pass in the String as a command line and receive a 
+list of each unique character's Huffman code, as well as the fully encoded 
+String, with each character encoded and separated by a single whitespace. 
+Currently, the output is just returned to standard output.
+
+INSTRUCTIONS
 
 For now, grab the code and place it in its own directory. Then just compile and
 run:
@@ -11,7 +14,18 @@ run:
 $ javac huffmancoding/Main.java huffmancoding/Code.java huffmancoding/Node.java huffmancoding/BinaryTree.java huffmancoding/HuffmanTree.java huffmancoding/PriorityQueue.java
 $ java huffmancoding/Main [mystring]
 
-Example: $ java huffmancoding/Main "This is an example of the Huffman algorithm at work."
+ARGUMENTS
+
+-s [string]             sets the text to encode as [string]
+-f [filename]           sets the text to encode as the file named [filename]
+
+Note: Precisely one of these arguments must be provided. If both are provided,
+the first one will be utilized.
+
+Example: $ java huffmancoding/Main -s "This is an example of the Huffman algorithm at work."
+         $ java huffmancoding/Main -f huffman_me.txt
+         
+EXAMPLE
 
 String: This is an example of the Huffman algorithm at work.
 k 110011 1
@@ -37,3 +51,4 @@ h 1000 3
 a 001 5
   111 9
 Encoded String: 101100 1000 1010 10011 111 1010 10011 111 001 10111 111 0001 101101 001 0110 110110 0000 0001 111 0100 0101 111 0111 1000 0001 111 110000 110001 0101 0101 0110 001 10111 111 001 0000 110010 0100 11010 1010 0111 1000 0110 111 001 0111 111 110111 0100 11010 110011 10010
+
