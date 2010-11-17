@@ -11,7 +11,6 @@ INSTRUCTIONS
 For now, grab the code and place it in its own directory. Then just compile and
 run:
 
-$ javac huffmancoding/Main.java huffmancoding/Code.java huffmancoding/Node.java huffmancoding/BinaryTree.java huffmancoding/HuffmanTree.java huffmancoding/PriorityQueue.java
 $ java huffmancoding/Main [arguments]
 
 ARGUMENTS
